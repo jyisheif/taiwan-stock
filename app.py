@@ -10,7 +10,7 @@ st.set_page_config(page_title="台股監控系統", layout="wide")
 # 2. 資料抓取函式
 def get_stock_data(stock_id):
     dl = DataLoader()
-    dl.login_by_token(api_token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoianlpc2hlaWYiLCJlbWFpbCI6Imp5aXNoZWlmQGdtYWlsLmNvbSIsInRva2VuX3ZlcnNpb24iOjB9.ccTI4YgmuGVNJ-CDjMKxFJymGg8BBU00k6LWyuo0fSo") # 若有 Token 請在此輸入
+    # dl.login_by_token(api_token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoianlpc2hlaWYiLCJlbWFpbCI6Imp5aXNoZWlmQGdtYWlsLmNvbSIsInRva2VuX3ZlcnNpb24iOjB9.ccTI4YgmuGVNJ-CDjMKxFJymGg8BBU00k6LWyuo0fSo") # 若有 Token 請在此輸入
     
     file_name = f"stock_{stock_id}.csv"
     
