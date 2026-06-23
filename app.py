@@ -13,7 +13,7 @@ def get_stock_data(stock_id):
     """抓取並更新資料的邏輯"""
     file_name = f"stock_{stock_id}.csv"
     dl = DataLoader()
-    # dl.login_by_token(api_token=API_TOKEN) # 若有 Token 請取消註解
+    dl.login_by_token(api_token=API_TOKEN) # 若有 Token 請取消註解
     
     # 判斷起始日期
     if os.path.exists(file_name):
