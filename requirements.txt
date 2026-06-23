@@ -1,4 +1,6 @@
 streamlit
+pyarrow
+openpyxl
 pandas
 plotly
 tqdm
