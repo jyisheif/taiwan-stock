@@ -22,7 +22,8 @@ def get_stock_data(stock_id):
         start_date = (last_date + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
     else:
         st.info(f"偵測到 {stock_id} 沒有本地資料，正在從 FinMind 伺服器下載...")
-        df_old = get_stock_data(stock_id) # 呼叫你定義的抓取函式
+        df_old = pd.DataFrame()
+        start_date = "2023-01-01" # 第一次抓取從 2023 開始
     
     # 執行抓取
     df_new = dl.taiwan_stock_daily(stock_id=stock_id, start_date=start_date)
