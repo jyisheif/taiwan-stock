@@ -29,7 +29,7 @@ def get_stock_data(stock_id):
         except Exception as e:
             st.error(f"下載失敗: {e}")
             return pd.DataFrame()
-    return pd.DataFrame()
+    #return pd.DataFrame()
 
 # 3. 側邊欄介面
 st.sidebar.title("設定")
