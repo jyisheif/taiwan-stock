@@ -47,7 +47,7 @@ if target_stock:
     
     if not df.empty:
         
-        json_string = json.dumps(df, indent=4)
+        json_string = json.dumps(df['date'])
         print(json_string)
         
         df['date'] = pd.to_datetime(df['date'])
