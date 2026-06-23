@@ -40,7 +40,9 @@ st.title(f"📊 {target_stock} 股價分析")
 
 if target_stock:
     with st.spinner('載入數據中...'):
+        print("開始抓取資料...")
         df = get_stock_data(target_stock)
+        print("資料抓取成功")
     
     if not df.empty:
         df['date'] = pd.to_datetime(df['date'])
