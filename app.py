@@ -44,7 +44,8 @@ if target_stock:
         print("開始抓取資料...")
         df = get_stock_data(target_stock)
         print("資料抓取成功")
-        json.dump(df)
+        json_string = json.dumps(df, indent=4)
+        print(json_string)
     
     if not df.empty:
         df['date'] = pd.to_datetime(df['date'])
